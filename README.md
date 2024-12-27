@@ -30,8 +30,9 @@ This project demonstrates how to test a user sign-up and login flow with two-fac
 
 Run the following command to install the necessary dependencies:
 
-```bash
-npm install
+    ```bash
+    npm install
+    ```
 
 ### 2. Add Your MailSlurp API Key
 
@@ -42,3 +43,58 @@ npm install
 {
   "MAILSLURP_API_KEY": "your-mailslurp-api-key"
 }
+```
+Usage
+-----
+
+1. Start the Cypress Test Runner:
+    ``` bash
+    npx cypress open
+
+2. Select the test file (e.g., `spec.cy.js`) and run the tests.
+
+## Test Workflow
+
+### User Sign-Up and Email Verification
+
+1. Visit the test playground at [https://playground.mailslurp.com](https://playground.mailslurp.com).
+2. Create a disposable inbox using MailSlurp.
+3. Enter the generated email address into the sign-up form.
+4. Retrieve the verification code sent to the inbox.
+5. Complete the 2FA verification process.
+6. Log in with the newly created credentials.
+
+### Expected Results
+
+- Users should successfully sign up with the 2FA code received via email.
+- Users should see a "Welcome" message after logging in.
+
+## Key Test Highlights
+
+- **Email Retrieval with MailSlurp:**  
+  The project uses MailSlurp’s `createInbox` and `waitForLatestEmail` methods to fetch emails during testing.
+
+- **Dynamic Email Handling:**  
+  Disposable email addresses are generated dynamically during each test.
+
+- **Cypress Timeout Management:**  
+  Custom timeouts are implemented to handle asynchronous operations like email retrieval.
+
+## Troubleshooting
+
+### Common Issues
+
+- **Timeout Errors:**
+  - Increase the timeout for email retrieval or element selection.
+- **Element Not Found:**
+  - Ensure the selectors used in the test match the target elements in the application.
+
+### Debugging
+
+- Use `cy.log()` to debug intermediate steps.
+- Check the Cypress Test Runner for detailed error stack traces.
+
+## Acknowledgments
+
+- [Cypress](https://www.cypress.io/) for an excellent testing framework.
+- [MailSlurp](https://www.mailslurp.com/) for disposable email solutions.
