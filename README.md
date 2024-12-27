@@ -80,6 +80,37 @@ Usage
 - **Cypress Timeout Management:**  
   Custom timeouts are implemented to handle asynchronous operations like email retrieval.
 
+## Test Results
+
+Below are the screenshots of the test results after running the project:
+
+### 1. Visit the Website
+![Visit the Website](./images/visit-website.png)
+
+### 2. Seek for Create Account and then Clicks it
+![Seek for Create Account and then Clicks it](./images/seek-create-account.png)
+
+### 3. Gets Email and Enters Email Address
+![Gets Email and Enters Email Address](./images/enter-email-address.png)
+
+### 4. Gets Password and Enters Password
+![Gets Password and Enters Password](./images/enter-password.png)
+
+### 5. Clicks on Create Account
+![Clicks on Create Account](./images/click-create-account.png)
+
+### 6. Gets Verification Code
+![Gets Verification Code](./images/get-verification-code.png)
+
+### 7. Enters Code then Confirms
+![Enters Code then Confirms](./images/enter-code-confirm.png)
+
+### 8. Signs In with Account
+![Signs In with Account](./images/sign-in-account.png)
+
+### 9. Navigates to HomePage
+![Navigates to HomePage](./images/navigate-homepage.png)
+
 ## Troubleshooting
 
 ### Common Issues
